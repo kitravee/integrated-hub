@@ -56,6 +56,12 @@ jobs:
     environment: Production
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
       - name: Install Vercel CLI
         run: pnpm install --frozen-lockfile=false
       - uses: actions/checkout@v3
