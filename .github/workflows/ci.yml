@@ -57,12 +57,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Debug Environment Variables
-        run: |
-          echo "VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}"
-          echo "VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}"
-          echo "VERCEL_TOKEN: ${'${{ secrets.VERCEL_TOKEN }}'}"
-      - uses: actions/checkout@v3
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
