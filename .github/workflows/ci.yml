@@ -68,10 +68,10 @@ jobs:
       - name: Set branch/tag name environment variable
         id: get_branch_or_tag
         run: echo "BRANCH_OR_TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
-      - name: Test inject env
-        run: vercel --build-env KEY1=value1 --build-env KEY2=$BRANCH_OR_TAG --token=${{ secrets.VERCEL_TOKEN }}
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Test inject env
+        run: vercel --build-env KEY1=value1 --build-env KEY2=$BRANCH_OR_TAG --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
         run: vercel build --target preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
