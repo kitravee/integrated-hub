@@ -33,6 +33,9 @@ module.exports = {
     "node_modules/",
     "dist/",
   ],
+  paths: {
+    "@/*": ["./*"]
+  },
   overrides: [
     // Force ESLint to detect .tsx files
     {
