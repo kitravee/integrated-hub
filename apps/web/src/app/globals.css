@@ -66,10 +66,4 @@
   body {
     @apply bg-background text-foreground;
   }
-  .input {
-    @apply h-full w-full outline-none border-none text-sm text-gray-700;
-  }
-  button {
-    @apply focus:ring-0 focus:ring-offset-0;
-  }
 }
