@@ -1,8 +1,8 @@
 "use client";
 
+import { cn } from "@/libs/utils";
 import { motion, type AnimationProps } from "framer-motion";
 
-import { cn } from "@/src/libs/utils";
 import { FC } from "react";
 
 const animationProps = {
