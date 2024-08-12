@@ -8,6 +8,8 @@ import { AppHeader } from "./components/layout/app-header";
 import { ShinyButton } from "@repo/ui/shiny-button";
 import { AnimatedBeamDemo } from "./presentation/animated-beam-demo";
 import { AppFooter } from "./components/layout";
+import { buttonVariants } from "@repo/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,7 +32,12 @@ export default function Home() {
             </div>
 
             <div className="flex md:justify-center gap-2">
-              <ShinyButton text="Road map" className="px-12" />
+              <Link
+                href="https://github.com/users/kitravee/projects/4"
+                target="_blank"
+              >
+                <ShinyButton text="Road map" className="px-12" />
+              </Link>
             </div>
           </div>
         </section>

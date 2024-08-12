@@ -24,6 +24,7 @@ export const AppHeader: FC = () => {
             <Link
               className={buttonVariants({ variant: "ghost", size: "icon" })}
               href="https://github.com/kitravee/integrated-hub"
+              target="_blank"
             >
               <GitHubLogoIcon />
             </Link>
