@@ -1,0 +1,19 @@
+{
+  "Typescript React Function Component": {
+    "prefix": "comp",
+    "body": [
+      "'use client'",
+      "import { FC } from 'react'",
+      "",
+      "type Props = {",
+      "\tsomeProps?: any",
+      "}",
+      "",
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}: FC<Props> = ({ someProps }) => {",
+      "\treturn <>{someProps}$0</>",
+      "}",
+      ""
+    ],
+    "description": "Typescript React Function Component"
+  }
+}
