@@ -1,8 +1,7 @@
 "use client";
 
 import { FrameIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Badge } from "@repo/ui/badge";
-import { buttonVariants } from "@repo/ui/button";
+import { Badge, buttonVariants } from "@repo/ui";
 import Link from "next/link";
 import { FC } from "react";
 import { ModeToggle } from "../ui";

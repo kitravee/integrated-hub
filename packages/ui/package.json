@@ -2,19 +2,8 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./button": "./src/components/ui/button.tsx",
-    "./animated-beam": "./src/components/magicui/animated-beam.tsx",
-    "./accordion": "./src/components/ui/accordion.tsx",
-    "./badge": "./src/components/ui/badge.tsx",
-    "./bento-grid": "./src/components/magicui/bento-grid.tsx",
-    "./dropdown-menu": "./src/components/ui/dropdown-menu.tsx",
-    "./particles": "./src/components/magicui/particles.tsx",
-    "./pulsating-button": "./src/components/magicui/pulsating-button.tsx",
-    "./animated-shiny-text": "./src/components/magicui/animated-shiny-text.tsx",
-    "./shiny-button": "./src/components/magicui/shiny-button.tsx",
-    "./utils": "./src/libs/utils.ts"
-  },
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
