@@ -1,4 +1,4 @@
-import { cn } from "@/src/libs/utils";
+import { cn } from "../../libs/utils";
 
 interface MarqueeProps {
   className?: string;
@@ -28,7 +28,7 @@ export default function Marquee({
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
