@@ -1,13 +1,7 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@repo/ui";
-import { AppHeader } from "./components/layout/app-header";
+import { AppHeader, AppFooter } from "@/components/layout";
 import { ShinyButton } from "@repo/ui";
 import { AnimatedBeamDemo } from "./presentation/animated-beam-demo";
-import { AppFooter } from "./components/layout";
+
 import Link from "next/link";
 
 export default function Home() {
