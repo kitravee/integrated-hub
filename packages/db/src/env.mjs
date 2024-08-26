@@ -5,8 +5,9 @@ export const env = createEnv({
   server: {
     DRIZZLE_DATABASE_URL: z.string().min(1),
   },
+
   runtimeEnv: {
-    DRIZZLE_DATABASE_URL: process.env.DRIZZLE_DATABASE_URL,
+    DRIZZLE_DATABASE_URL: process.env.NEXT_DRIZZLE_DATABASE_URL,
   },
   skipValidation: true,
 });
