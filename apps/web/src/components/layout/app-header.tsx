@@ -12,7 +12,13 @@ export const AppHeader: FC = () => {
       <div className="container">
         <div className="flex items-center h-16">
           <div className="flex items-center grow gap-4">
-            <FrameIcon width={24} height={24} />
+            <Link
+              className={buttonVariants({ variant: "ghost", size: "icon" })}
+              href="https://github.com/kitravee/integrated-hub"
+              target="_blank"
+            >
+              <FrameIcon width={24} height={24} />
+            </Link>
             <div>
               <h1 className="text-1xl font-bold">Integrated-hub</h1>
             </div>

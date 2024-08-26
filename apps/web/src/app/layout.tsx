@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { ThemeProvider } from "./components/layout/theme-provider";
+import { ThemeProvider } from "@/components/layout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,9 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Your Comprehensive Solution for Seamless Digital Integration",
-  description:
-    "IntegratedHub offers a one-stop platform designed to streamline digital operations for businesses of all sizes. Whether you're looking to integrate various tools, optimize workflows, or manage your digital infrastructure, IntegratedHub provides a robust and user-friendly solution to help you achieve efficiency and scalability. Empower your business with the seamless integration of your digital ecosystem.",
+  title:
+    "Last Connect | Your Comprehensive Solution for Seamless Digital Integration",
+  description: "Integrations made easy. Focus on your business.",
 };
 
 export default function RootLayout({
