@@ -4,6 +4,7 @@ import { Adapter } from "next-auth/adapters";
 import { createUser, getUser } from "./action";
 import { SqlFlavorOptions } from "@auth/drizzle-adapter/lib/utils";
 
+// TODO: workaround by force type SqlFlavorOptions
 export const adapter: Adapter = {
   ...DrizzleAdapter(db as SqlFlavorOptions, {
     usersTable: users,
