@@ -8,7 +8,7 @@ on:
     tags:
       - "preview/*" # Push events to every tag not containing /
 jobs:
-  Deploy-Production:
+  Deploy-Preview:
     environment: Preview
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
       - name: Install pnpm
         run: npm install -g pnpm@6
       - name: Install Vercel CLI
