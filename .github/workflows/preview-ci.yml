@@ -6,7 +6,7 @@ on:
   push:
     # Pattern matched against refs/tags
     tags:
-      - "*" # Push events to every tag not containing /
+      - "preview/*" # Push events to every tag not containing /
 jobs:
   Deploy-Production:
     environment: Production
