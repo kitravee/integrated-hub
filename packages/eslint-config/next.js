@@ -31,9 +31,6 @@ module.exports = {
     ".*.js",
     "node_modules/",
   ],
-  paths: {
-    "@/*": ["./*"]
-  },
   overrides: [
     {
       files: ["*.js?(x)", "*.ts?(x)"],
