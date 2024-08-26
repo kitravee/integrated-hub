@@ -5,8 +5,9 @@ import { createUser, getUser } from "./action";
 import { SqlFlavorOptions } from "@auth/drizzle-adapter/lib/utils";
 
 // TODO: workaround by force type SqlFlavorOptions
+const tmpDB = db as SqlFlavorOptions;
 export const adapter: Adapter = {
-  ...DrizzleAdapter(db as SqlFlavorOptions, {
+  ...DrizzleAdapter(tmpDB, {
     usersTable: users,
     accountsTable: accounts,
     sessionsTable: sessions,
