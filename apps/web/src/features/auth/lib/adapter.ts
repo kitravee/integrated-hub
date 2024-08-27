@@ -1,5 +1,7 @@
+// @ts-nocheck
+// TODO: Fix type of db related to NeonHttpDatabase and SqlFlavorOptions
+
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
-// import { SqlFlavorOptions } from "@auth/drizzle-adapter/lib/utils";
 import { db, users, accounts, sessions, verificationTokens } from "@repo/db";
 import { Adapter } from "next-auth/adapters";
 
