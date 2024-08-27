@@ -1,11 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
+// import { SqlFlavorOptions } from "@auth/drizzle-adapter/lib/utils";
 import { db, users, accounts, sessions, verificationTokens } from "@repo/db";
 import { Adapter } from "next-auth/adapters";
+
 import { createUser, getUser } from "./action";
-import { SqlFlavorOptions } from "@auth/drizzle-adapter/lib/utils";
 
 export const adapter: Adapter = {
   ...DrizzleAdapter(db, {
