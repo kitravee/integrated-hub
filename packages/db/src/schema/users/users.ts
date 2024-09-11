@@ -9,6 +9,7 @@ import {
   boolean,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "next-auth/adapters";
+import { usersToWorkspaces } from "../user-to-workspaces";
 
 export const users = pgTable("user", {
   id: text("id")
@@ -89,3 +90,7 @@ export const authenticators = pgTable(
     }),
   })
 );
+
+export const userRelations = relations(users, ({ many }) => ({
+  usersToWorkspaces: many(usersToWorkspaces),
+}));
