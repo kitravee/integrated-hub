@@ -2,6 +2,8 @@ import { timestamp, pgTable, text } from "drizzle-orm/pg-core";
 import { workspacePlans } from "./constants";
 import { relations } from "drizzle-orm";
 import { usersToWorkspaces } from "../user-to-workspaces";
+import { skus } from "../skus";
+import { pages } from "../pages";
 
 export const workspaces = pgTable("workspace", {
   id: text("id")
@@ -16,4 +18,6 @@ export const workspaces = pgTable("workspace", {
 
 export const workspaceRelations = relations(workspaces, ({ many }) => ({
   usersToWorkspaces: many(usersToWorkspaces),
+  skus: many(skus),
+  pages: many(pages),
 }));

@@ -5,6 +5,7 @@
   "scripts": {
     "generate": "drizzle-kit generate",
     "migrate": "bun src/migrate.ts",
+    "seed": "bun src/seed.ts",
     "dev": "tsc --watch",
     "build": "tsc"
   },
