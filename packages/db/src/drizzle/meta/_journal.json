@@ -36,6 +36,20 @@
       "when": 1724684988671,
       "tag": "0004_brown_omega_flight",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1726134766586,
+      "tag": "0005_petite_talon",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1726135924199,
+      "tag": "0006_familiar_albert_cleary",
+      "breakpoints": true
     }
   ]
 }
