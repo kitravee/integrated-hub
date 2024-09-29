@@ -1,8 +1,9 @@
-import { adapter } from "./adapter";
 import { db, eq, users } from "@repo/db";
 import NextAuth from "next-auth";
 import github from "next-auth/providers/github";
 import google from "next-auth/providers/google";
+
+import { adapter } from "./adapter";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   debug: process.env.NODE_ENV === "development",
