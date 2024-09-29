@@ -1,7 +1,6 @@
-import type { AdapterUser } from "next-auth/adapters";
-import * as randomWordSlugs from "random-word-slugs";
-
 import { db, eq, users } from "@repo/db";
+
+import type { AdapterUser } from "next-auth/adapters";
 
 export async function createUser(
   data: Omit<AdapterUser, "id">
