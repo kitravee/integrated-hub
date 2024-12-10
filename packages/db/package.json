@@ -1,6 +1,7 @@
 {
   "name": "@repo/db",
   "version": "0.0.1",
+  "private": true,
   "main": "src/index.ts",
   "scripts": {
     "generate": "drizzle-kit generate",
@@ -15,6 +16,7 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "@kitravee/package-a": "^0.0.1",
     "@neondatabase/serverless": "^0.9.4",
     "@t3-oss/env-core": "0.7.0",
     "drizzle-orm": "^0.33.0",
