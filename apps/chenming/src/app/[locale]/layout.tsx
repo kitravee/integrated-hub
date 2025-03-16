@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Inter } from "next/font/google";
 // import { unstable_ViewTransition as ViewTransition } from "react";
-import "./globals.css";
+import "../globals.css";
 // import NoSSR from "@/components/no-ssr";
 // import dynamic from "next/dynamic";
 import { ThemeProvider } from "next-themes";
 import NoSSR from "@/components/no-ssr";
+
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,13 +25,20 @@ export const metadata: Metadata = {
   description: "Frontend developer, optimist, community builder.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang={locale} className={`${inter.className}`}>
       <body className="antialiased tracking-tight">
         <NoSSR>
           <ThemeProvider
@@ -36,13 +47,15 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
-              <main className="max-w-[60ch] mx-auto w-full space-y-6">
-                {children}
-              </main>
+            <NextIntlClientProvider>
+              <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
+                <main className="max-w-[60ch] mx-auto w-full space-y-6">
+                  {children}
+                </main>
 
-              <Footer />
-            </div>
+                <Footer />
+              </div>
+            </NextIntlClientProvider>
           </ThemeProvider>
         </NoSSR>
       </body>
