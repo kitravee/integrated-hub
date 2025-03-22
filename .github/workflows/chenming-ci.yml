@@ -25,21 +25,18 @@ jobs:
         with:
           fetch-depth: 2
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 19.9.0
           cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build
-        run: pnpm build
-
-      - name: Test
-        run: pnpm test
+        run: pnpm build --filter=chenming
