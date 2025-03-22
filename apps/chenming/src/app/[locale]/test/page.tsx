@@ -10,7 +10,7 @@ export default async function HomePage({ params }: { params: Params }) {
   try {
     const Content = (await import(`./${locale}.mdx`)).default;
     return <Content />;
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
