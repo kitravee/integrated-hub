@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
-type Params = {
+type Params = Promise<{
   locale: string;
-};
+}>;
 
 export default async function HomePage({ params }: { params: Params }) {
   const { locale } = await params;
